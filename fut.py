@@ -4,9 +4,9 @@ from twilio.rest import Client
 
 
 def sms():
-    sid = 'AC7b4c536de947b0d4bb01a93b3dee52a1'
-    token = '92aab5db4522def3a91788dc4aca1245'
-    twilio_number = '+15513776919'
+    sid = 'seu account_sid'
+    token = 'seu token'
+    twilio_number = 'seu número twilio'
 
     client = Client(sid, token)
 
@@ -16,8 +16,9 @@ def sms():
                 body=f'''Notícias do {time}\n\n
                     {linha.strip()}''',
                from_=twilio_number,
-               to='+5581999756049' 
+               to='seu número original de telefone' 
             )
+    print('sms enviado')
 
 
 time = input('Qual teu time: ')
